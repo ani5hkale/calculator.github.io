@@ -1,0 +1,81 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: monospace, sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(135, 235, 222);
+    font-size: 5vh;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(37, 39, 71);
+    border-radius: 10px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, rgb(251, 137, 255), rgb(132, 150, 255));
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  }
+  
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+  }
+  
+  .calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+  }
+  
+  .span-two {
+    grid-column: span 2;
+  }
+  
+  .output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  
+  .output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+  }
+  
+  .output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+  }
+
+  .copy {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 3vh;
+    font-family: monospace;
+}
+
+.footer {
+    background-color: pink;
+    opacity: .60;
+    border-radius: 15px;
+    border: plum 2px solid;
+}
